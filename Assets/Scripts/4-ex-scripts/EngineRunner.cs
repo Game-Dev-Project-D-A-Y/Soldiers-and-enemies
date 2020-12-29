@@ -3,12 +3,12 @@ using UnityEngine.AI;
 
 
 /**
- * This component represents an NPC that runs randomly between targets.
- * The targets are all the objects with a Target component.
+ * This component represents a Engine Enemy that goes to the engine and shut its light off
  */
 [RequireComponent(typeof(NavMeshAgent))]
 public class EngineRunner: MonoBehaviour {
 
+    [Tooltip("Engine object")]
     [SerializeField] Transform engine;
 
     private NavMeshAgent navMeshAgent;
@@ -18,6 +18,7 @@ public class EngineRunner: MonoBehaviour {
     [SerializeField] private Transform enemyPosition = null;
     [SerializeField] private Vector3 currentEnemyPosition;
     [SerializeField] private float maxDist;
+    [Header("Engine lights")]
     [SerializeField] Light engineLightToTurnOff;
     [SerializeField] ParticleSystem objectToLightOff ;
     [SerializeField] ParticleSystem objectToLightOff2 ;
@@ -42,8 +43,8 @@ public class EngineRunner: MonoBehaviour {
         //GameObject playerObj = GameObject.Find("Enemy Engine");
         currentEnemyPosition = enemyPosition.transform.position;
           float dist = Vector3.Distance(currentEnemyPosition, engine.position);
+
         if(dist<maxDist){
-            
             objectToLightOff.Stop();
             objectToLightOff2.Stop();
             engineLightToTurnOff.color = Color.black;
