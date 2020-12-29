@@ -2,21 +2,26 @@
      
 <img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/explosion.jpeg width="500" />
      
-<div dir="rtl">    
+We chose to do the following:    
 
-
-מטלה שבועית שבוע 9 חלק שני
-
-בחלק זה בחרנו בסעיפים הבאים:
-
-שחקן בעולם תלת מימדי שאלה 1 : תזוזה,  סעיף ב תזוזה
-
-שחקן בעולם תלת מימדי שאלה 2 : נשק , סעיף ג רימון
-
-שחקן בעולם תלת מימדי שאלה 3 : אינטראקציה, סעיף ג מנורה
-
-בינה מלאכותית בתלת מימד, פיתוח אויב מהשיעור שאלה 1 : מערכת ניווט חכמה יותר 
-
+<img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/1.jpg width="600" heigt="200" />   
+     
+     
+     
+     
+     
+<img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/2.jpg width="600" heigt="200" />     
+      
+      
+      
+      
+<img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/3.jpg width="600" heigt="200" />     
+      
+      
+      
+      
+      
+<img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/4.jpg width="600" heigt="200" />
 
 
 
