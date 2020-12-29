@@ -2,7 +2,7 @@
      
 <img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/explosion.jpeg width="600" />   
 
-## [PLAY IN ITCH]()    
+## [PLAY ON ITCH](https://game-dev-project-d-a-y.itch.io/exgame)    
 
 ### We chose to do the following:    
      
