@@ -3,8 +3,7 @@ using UnityEngine.AI;
 
 
 /**
- * This component represents an NPC that runs randomly between targets.
- * The targets are all the objects with a Target component.
+ * This component represents a Coward Enemy that goes to the furthest target from the player
  */
 [RequireComponent(typeof(NavMeshAgent))]
 public class CowardRunner: MonoBehaviour {
@@ -12,23 +11,29 @@ public class CowardRunner: MonoBehaviour {
     [Tooltip("A game object whose children have a Target component. Each child represents a target.")]
     [SerializeField] private Transform targetFolder = null;
 
+    [Tooltip("Player position to get away from")]
     [SerializeField] private Transform playerPosition = null;
     private Target[] allTargets = null;
 
     [Header("For debugging")]
     [SerializeField] private Vector3 currentPlayerPosition;
 
+    // keep the furthest distance and target
     [SerializeField] private Target furthestTarget = null;
     [SerializeField] private float furthestDistance = -1;
+    // indicates if the enemy has path to go
+    [SerializeField] bool hasPath;
 
     private NavMeshAgent navMeshAgent;
     private Animator animator;
     private float rotationSpeed = 5f;
 
     private void Start() {
+        // init components
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
+        // init targets
         allTargets = targetFolder.GetComponentsInChildren<Target>(false); // get components in active children only
         Debug.Log("Found " + allTargets.Length + " targets.");
         currentPlayerPosition = playerPosition.position;
@@ -49,12 +54,12 @@ public class CowardRunner: MonoBehaviour {
         navMeshAgent.SetDestination(furthestTarget.transform.position);
     }
 
-    public bool hasPath;
     private void Update() {
         hasPath = navMeshAgent.hasPath;
         if (hasPath) {
             FaceDestination();
         }
+        // get player position in runtime
         GameObject playerObj = GameObject.Find("Player");
         currentPlayerPosition = playerObj.transform.position;
         SelectNewTarget();

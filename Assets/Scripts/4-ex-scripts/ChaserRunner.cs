@@ -3,17 +3,17 @@ using UnityEngine.AI;
 
 
 /**
- * This component represents an NPC that runs randomly between targets.
- * The targets are all the objects with a Target component.
+ * This component represents a Chaser Enemy that follows the player
  */
 [RequireComponent(typeof(NavMeshAgent))]
 public class ChaserRunner: MonoBehaviour {
 
-
+    [Tooltip("Player position to run after")]
     [SerializeField] private Transform playerPosition = null;
 
     [Header("For debugging")]
     [SerializeField] private Vector3 currentPlayerPosition;
+    [SerializeField] bool hasPath;
 
     private NavMeshAgent navMeshAgent;
     private Animator animator;
@@ -28,17 +28,18 @@ public class ChaserRunner: MonoBehaviour {
         SelectNewTarget();
     }
 
+    // go to current player position
     private void SelectNewTarget() {
-
         navMeshAgent.SetDestination(currentPlayerPosition);
     }
 
-    public bool hasPath;
+
     private void Update() {
         hasPath = navMeshAgent.hasPath;
         if (hasPath) {
             FaceDestination();
         }
+        // get player position in runtime
         GameObject playerObj = GameObject.Find("Player");
         currentPlayerPosition = playerObj.transform.position;
         SelectNewTarget();

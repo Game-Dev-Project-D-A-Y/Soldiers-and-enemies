@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class LaunchGrenade : MonoBehaviour
 {
+    [Tooltip("Position to throw from")]
     [SerializeField] Transform spawnPoint;
+
+    [Tooltip("Grenade prefab")]
     [SerializeField] GameObject grenade;
 
+    [Tooltip("Throw range")]
     [SerializeField] float range = 10f;
 
     [SerializeField] KeyCode keyToLaunch;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(keyToLaunch))
@@ -28,6 +25,7 @@ public class LaunchGrenade : MonoBehaviour
 
     private void Launch()
     {
+        // create new grenade object and throw it
         GameObject grenadeInstance = Instantiate(grenade, spawnPoint.position, spawnPoint.rotation);
         grenadeInstance.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * range, ForceMode.Impulse);
     }
