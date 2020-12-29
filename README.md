@@ -35,7 +35,8 @@ To each lamp thats on the map (which we added from the assets store..) we added 
 [BraveRunner]() -  Searches the closest disttance from the playe from the targets         
 [ChaseRunner]() -  Gets the location of the player and transforms the postision towards the player  
 [EngineRunner]() - Gets the location of the Engine and soon as it gets to the Engine we shutdown the light through the ParticleSystem    
-
+     
+<img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/boomboom.jpg width="600" />   
 
 
 
