@@ -1,6 +1,9 @@
 # Unity week 6: Soldiers & Facility
      
 <img src= https://github.com/Game-Dev-Project-D-A-Y/soldiers-and-enemies/blob/master/explosion.jpeg width="500" />
+     
+<div dir="rtl">    
+
 
 מטלה שבועית שבוע 9 חלק שני
 
