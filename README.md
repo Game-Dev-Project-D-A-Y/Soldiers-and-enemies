@@ -7,9 +7,10 @@
 
 ## How to PLAY ?
 
-* Q - to throw grenade
-* SPACE - speed up 
-* E - to turnON/TeurnOFF the light
+* arrows & mouse - movement
+* Q - throw a grenade
+* SPACE - sprint 
+* E - turnON/TurnOFF the light
 
 
 ### We chose to do the following:    
