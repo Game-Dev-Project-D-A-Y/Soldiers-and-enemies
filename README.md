@@ -4,6 +4,14 @@
 
 ## [PLAY ON ITCH](https://game-dev-project-d-a-y.itch.io/exgame)    
 
+
+## How to PLAY ?
+
+* Q - to throw grenade
+* SPACE - speed up 
+* E - to turnON/TeurnOFF the light
+
+
 ### We chose to do the following:    
      
 #### Part 1
